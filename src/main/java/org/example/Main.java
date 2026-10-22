@@ -1,13 +1,16 @@
 public class Main {
     public static void main(String[] args) {
-
-        // Объявляете переменные для входных данных и
-        // параметров программы: начального счёта,
-        // суммы пополнения и тп
-
-        // Условным оператором проверяете, превысила ли
-        // сумма пополнения порог, и для этих двух разных
-        // сценариев рассчитываете сумму бонуса и выводите
-        // на экран.
+        int initialSum = 100;
+        int topUp = 5000;
+        float bonus = topUp * 0.01F;
+        if (topUp > 1000) {
+            float totalSum = initialSum + topUp + bonus;
+            System.out.println("Итоговый счёт: " + totalSum);
+            System.out.println("Количество бонусных рублей: " + bonus);
+        } else {
+            float totalSum = initialSum + topUp;
+            System.out.println("Итоговый счёт: " + totalSum);
+            System.out.println("Количество бонусных рублей: 0");
+        }
     }
 }
